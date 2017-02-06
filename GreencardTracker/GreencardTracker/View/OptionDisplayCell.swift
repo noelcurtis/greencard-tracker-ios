@@ -13,7 +13,8 @@ import UIKit
 class OptionDisplayCell: UITableViewCell {
     
     let inputLabel: UILabel = UILabel()
-    let optionLabel: UILabel = UILabel()
+    let optionTextField: UITextField = UITextField()
+    var datePicker: UIDatePicker!
     
     class var REUSE_IDENTIFIER : String {
         return "option_display_cell"
@@ -21,8 +22,10 @@ class OptionDisplayCell: UITableViewCell {
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String!) {
         super.init(style: UITableViewCellStyle.default, reuseIdentifier: reuseIdentifier)
-        self.selectionStyle = UITableViewCellSelectionStyle.none
         
+        setupPickers()
+        
+        self.selectionStyle = UITableViewCellSelectionStyle.none
         self.backgroundColor = UIColor(red:0.97, green:0.97, blue:0.97, alpha:1.0)
         
         inputLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -31,17 +34,19 @@ class OptionDisplayCell: UITableViewCell {
         inputLabel.tintColor = UIColor(red:0.18, green:0.18, blue:0.18, alpha:1.0)
         inputLabel.textColor = UIColor(red:0.18, green:0.18, blue:0.18, alpha:1.0)
         
-        optionLabel.translatesAutoresizingMaskIntoConstraints = false
-        optionLabel.font = UIFont(name: "AvenirNext-Medium", size: 20)
-        optionLabel.text = "01/01/2017"
-        optionLabel.tintColor = self.tintColor
-        optionLabel.textColor = self.tintColor
-        optionLabel.textAlignment = NSTextAlignment.right
+        optionTextField.translatesAutoresizingMaskIntoConstraints = false
+        optionTextField.font = UIFont(name: "AvenirNext-Medium", size: 20)
+        optionTextField.text = "01/01/2017"
+        optionTextField.tintColor = self.tintColor
+        optionTextField.textColor = self.tintColor
+        optionTextField.textAlignment = NSTextAlignment.right
+        optionTextField.inputView = datePicker
+        
         
         self.addSubview(inputLabel)
-        self.addSubview(optionLabel)
+        self.addSubview(optionTextField)
         
-        let viewsDictionary : [String: Any] = ["input_label": inputLabel, "option_label": optionLabel]
+        let viewsDictionary : [String: Any] = ["input_label": inputLabel, "option_label": optionTextField]
         let inputLabelHorizontalConstraints = NSLayoutConstraint.constraints(withVisualFormat: "H:|-20-[input_label]-[option_label(==140)]-20-|", options: [], metrics: nil, views: viewsDictionary)
         let inputLabelVerticalConstraints = NSLayoutConstraint.constraints(withVisualFormat: "V:|-[input_label]-|", options: [], metrics: nil, views: viewsDictionary)
         let optionLabelVerticalConstraints = NSLayoutConstraint.constraints(withVisualFormat: "V:|-[option_label]-|", options: [], metrics: nil, views: viewsDictionary)
@@ -57,7 +62,14 @@ class OptionDisplayCell: UITableViewCell {
     
     func customize(inputLableText: String, optionLabelText: String) {
         self.inputLabel.text = inputLableText
-        self.optionLabel.text = optionLabelText
+        self.optionTextField.text = optionLabelText
     }
+    
+    func setupPickers() {
+        datePicker = UIDatePicker()
+        datePicker.datePickerMode = UIDatePickerMode.date
+        datePicker.date = Date()
+    }
+    
     
 }

@@ -36,7 +36,7 @@ class UserOptionsViewController: UITableViewController {
         self.navigationItem.leftBarButtonItem = nil
         self.navigationItem.hidesBackButton = true
     }
-    
+
     // MARK: - UITableViewDatasource
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -64,6 +64,7 @@ class UserOptionsViewController: UITableViewController {
     
     func customizeVisaClassCell(cell: OptionDisplayCell) {
         cell.customize(inputLableText: "Visa Class", optionLabelText: "1st")
+        
     }
     
     func customizePriorityDateCell(cell: OptionDisplayCell) {

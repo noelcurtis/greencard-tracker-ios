@@ -15,6 +15,9 @@
 		302850FE1E44D33D00EC9366 /* GreencardTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302850FD1E44D33D00EC9366 /* GreencardTrackerTests.swift */; };
 		3028510B1E44D84400EC9366 /* VisaBulletinClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3028510A1E44D84400EC9366 /* VisaBulletinClient.swift */; };
 		3028510E1E44E0FC00EC9366 /* Bulletin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3028510D1E44E0FC00EC9366 /* Bulletin.swift */; };
+		3042B2F91E47AB63000654DB /* UserOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3042B2F81E47AB63000654DB /* UserOptions.swift */; };
+		3042B2FC1E47D426000654DB /* UserOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3042B2FB1E47D426000654DB /* UserOptionsViewController.swift */; };
+		3042B2FE1E47EAB1000654DB /* OptionDisplayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3042B2FD1E47EAB1000654DB /* OptionDisplayCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,9 @@
 		302850FF1E44D33D00EC9366 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3028510A1E44D84400EC9366 /* VisaBulletinClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VisaBulletinClient.swift; path = Client/VisaBulletinClient.swift; sourceTree = "<group>"; };
 		3028510D1E44E0FC00EC9366 /* Bulletin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Bulletin.swift; path = Model/Bulletin.swift; sourceTree = "<group>"; };
+		3042B2F81E47AB63000654DB /* UserOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserOptions.swift; path = Model/UserOptions.swift; sourceTree = "<group>"; };
+		3042B2FB1E47D426000654DB /* UserOptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserOptionsViewController.swift; path = View/UserOptionsViewController.swift; sourceTree = "<group>"; };
+		3042B2FD1E47EAB1000654DB /* OptionDisplayCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OptionDisplayCell.swift; path = View/OptionDisplayCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +87,7 @@
 		302850E71E44D33D00EC9366 /* GreencardTracker */ = {
 			isa = PBXGroup;
 			children = (
+				3042B2FA1E47D3E9000654DB /* View */,
 				3028510C1E44DB2E00EC9366 /* Model */,
 				302851091E44D73F00EC9366 /* Client */,
 				302850E81E44D33D00EC9366 /* AppDelegate.swift */,
@@ -114,8 +121,18 @@
 			isa = PBXGroup;
 			children = (
 				3028510D1E44E0FC00EC9366 /* Bulletin.swift */,
+				3042B2F81E47AB63000654DB /* UserOptions.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		3042B2FA1E47D3E9000654DB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3042B2FB1E47D426000654DB /* UserOptionsViewController.swift */,
+				3042B2FD1E47EAB1000654DB /* OptionDisplayCell.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,9 +238,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3042B2FE1E47EAB1000654DB /* OptionDisplayCell.swift in Sources */,
+				3042B2F91E47AB63000654DB /* UserOptions.swift in Sources */,
 				3028510E1E44E0FC00EC9366 /* Bulletin.swift in Sources */,
 				302850EB1E44D33D00EC9366 /* ViewController.swift in Sources */,
 				302850E91E44D33D00EC9366 /* AppDelegate.swift in Sources */,
+				3042B2FC1E47D426000654DB /* UserOptionsViewController.swift in Sources */,
 				3028510B1E44D84400EC9366 /* VisaBulletinClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,6 +448,7 @@
 				302851041E44D33D00EC9366 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		302851051E44D33D00EC9366 /* Build configuration list for PBXNativeTarget "GreencardTrackerTests" */ = {
 			isa = XCConfigurationList;
@@ -436,6 +457,7 @@
 				302851071E44D33D00EC9366 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

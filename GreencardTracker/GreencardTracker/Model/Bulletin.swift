@@ -8,6 +8,21 @@
 
 import Foundation
 
+enum EmploymentSponsoredVisaClass: String {
+    case first = "1st"
+    case second = "2nd"
+    case third = "3rd"
+    case otherWorkers = "Other Workers"
+    case fourth = "4th"
+    case religiousWorkers = "Certain Religious Workers"
+    case nonRegional = "5th Non-Regional Center (C5 and T5)"
+    case regionalCenter = "5th Regional Center (I5 and R5)"
+    
+    static let allValues = [first, second, third, otherWorkers, fourth, religiousWorkers, nonRegional, regionalCenter]
+    
+    static let allValuesPositions = [first:0, second:1, third:2, otherWorkers:3, fourth:4, religiousWorkers:5, nonRegional:6, regionalCenter:7]
+}
+
 class DateFormat {
     let dateFormatter = DateFormatter()
     

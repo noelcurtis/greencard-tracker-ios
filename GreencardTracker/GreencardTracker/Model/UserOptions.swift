@@ -8,18 +8,7 @@
 
 import Foundation
 
-enum EmploymentApplicationFamily {
-    case first
-    case second
-    case third
-    case otherWorkers
-    case fourth
-    case religiousWorkers
-    case fifthNonRegional
-    case fifthRegional
-}
-
 class UserOptions {
     var priorityDate: Date! = Date()
-    var applicationFamily: EmploymentApplicationFamily! = .second
+    var applicationFamily: EmploymentSponsoredVisaClass! = .second
 }

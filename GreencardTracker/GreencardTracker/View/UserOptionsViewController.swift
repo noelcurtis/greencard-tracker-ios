@@ -12,6 +12,7 @@ import UIKit
 class UserOptionsViewController: UITableViewController {
     
     var okButton: UIBarButtonItem!
+    var userOptions: UserOptions! = UserOptions()
     
     override func viewDidLoad() {
         setupTableView()
@@ -26,7 +27,7 @@ class UserOptionsViewController: UITableViewController {
     
     func setupNavBar() {
         okButton = UIBarButtonItem(image: UIImage(named: "OkButton")!,
-                                   style: UIBarButtonItemStyle.plain, target: self, action: nil)
+                                   style: UIBarButtonItemStyle.plain, target: self, action: #selector(updateUserOptions(uiBarButtonItem:)))
         
         let navTitle = UIImage(named: "OptionsTitle")!.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
         let navTitleView = UIImageView(image: navTitle)
@@ -63,13 +64,39 @@ class UserOptionsViewController: UITableViewController {
     }
     
     func customizeVisaClassCell(cell: OptionDisplayCell) {
-        cell.customize(inputLableText: "Visa Class", optionLabelText: "1st")
-        
+        cell.customizeAsVisaClassInput(inputLableText: "Visa Class", userOptions: userOptions)
     }
     
     func customizePriorityDateCell(cell: OptionDisplayCell) {
-        cell.customize(inputLableText: "Priority Date", optionLabelText: "01/01/2015")
+        cell.customizeAsDateInput(inputLableText: "Priority Date", userOptions: userOptions)
+    }
+    
+    func getUserOptions() -> UserOptions {
+        let userOptions = UserOptions()
+        if let optionDisplayCell = self.tableView.cellForRow(at: IndexPath(row: 0, section: 0))! as? OptionDisplayCell {
+            if optionDisplayCell.outputValue is Date {
+                userOptions.priorityDate = optionDisplayCell.outputValue as! Date
+            } else if optionDisplayCell.outputValue is EmploymentSponsoredVisaClass {
+                userOptions.applicationFamily = optionDisplayCell.outputValue as! EmploymentSponsoredVisaClass
+            }
+        } else {
+          // add some logging
+        }
+        
+        if let optionDisplayCell = self.tableView.cellForRow(at: IndexPath(row: 1, section: 0))! as? OptionDisplayCell {
+            if optionDisplayCell.outputValue is Date {
+                userOptions.priorityDate = optionDisplayCell.outputValue as! Date
+            } else if optionDisplayCell.outputValue is EmploymentSponsoredVisaClass {
+                userOptions.applicationFamily = optionDisplayCell.outputValue as! EmploymentSponsoredVisaClass
+            }
+        } else {
+            // add some logging
+        }
+        return userOptions
+    }
+    
+    func updateUserOptions(uiBarButtonItem: UIBarButtonItem) {
+        userOptions = getUserOptions()
     }
 
-    
 }

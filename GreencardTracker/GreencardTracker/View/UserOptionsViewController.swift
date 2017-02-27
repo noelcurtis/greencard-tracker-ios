@@ -97,6 +97,7 @@ class UserOptionsViewController: UITableViewController {
     
     func updateUserOptions(uiBarButtonItem: UIBarButtonItem) {
         userOptions = getUserOptions()
+        self.navigationController!.pushViewController(VisaStatusViewController(), animated: true)
     }
 
 }

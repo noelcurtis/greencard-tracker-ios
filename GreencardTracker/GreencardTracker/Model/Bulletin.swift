@@ -23,6 +23,18 @@ enum EmploymentSponsoredVisaClass: String {
     static let allValuesPositions = [first:0, second:1, third:2, otherWorkers:3, fourth:4, religiousWorkers:5, nonRegional:6, regionalCenter:7]
 }
 
+enum CaseArea: String {
+    case all = "All Chargability Areas"
+    case china = "China mainland born"
+    case elSalvadore = "El Salvadore Guatemala Honduras"
+    case india = "India"
+    case mexico = "Mexico"
+    case phillippines = "Phillippines"
+    
+    static let allValues = [all, china, elSalvadore, india, mexico, phillippines]
+    
+}
+
 class DateFormat {
     let dateFormatter = DateFormatter()
     
@@ -122,6 +134,23 @@ class EmploymentSponsoredRow {
             elSalvadorGuatamelaHonduras = DateOrCurrent()
         }
         
+    }
+    
+    func getDateOrCurrent(_ caseArea: CaseArea) -> DateOrCurrent {
+        switch caseArea {
+        case .china:
+            return self.china
+        case .elSalvadore:
+            return self.elSalvadorGuatamelaHonduras
+        case .india:
+            return self.india
+        case .mexico:
+            return self.mexico
+        case .phillippines:
+            return self.phillippines
+        default:
+            return self.chargeabilityAreas
+        }
     }
 }
 

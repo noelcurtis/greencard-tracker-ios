@@ -36,14 +36,14 @@ final class S3VisaBulletinClient: VisaBulletinClient {
     func getLatestBulletin(completion: @escaping VisaBulletinClientCompletion) {
         let bulletinUrl = baseURL.appendingPathComponent("greencard-dev/bulletin.json")
         URLSession.shared.dataTask(with: bulletinUrl) { (data, response, error) in
-            self.didFetchWeatherData(data: data, response: response, error: error, completion: completion)
+            self.didFetchBulletinData(data: data, response: response, error: error, completion: completion)
         }.resume()
     }
     
     
     // MARK: - Helper Methods
     
-    private func didFetchWeatherData(data: Data?, response: URLResponse?, error: Error?, completion: VisaBulletinClientCompletion) {
+    private func didFetchBulletinData(data: Data?, response: URLResponse?, error: Error?, completion: VisaBulletinClientCompletion) {
         if let _ = error {
             completion(nil, .FailedRequest)
             

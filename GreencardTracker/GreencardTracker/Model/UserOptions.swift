@@ -11,4 +11,5 @@ import Foundation
 class UserOptions {
     var priorityDate: Date! = Date()
     var applicationFamily: EmploymentSponsoredVisaClass! = .second
+    var caseArea: CaseArea! = .all
 }

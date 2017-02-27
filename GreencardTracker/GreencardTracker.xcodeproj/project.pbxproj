@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		301A36721E63C1C100DEE787 /* OutputTextTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301A36711E63C1C100DEE787 /* OutputTextTests.swift */; };
+		301A36741E63C2B100DEE787 /* febBulletin.json in Resources */ = {isa = PBXBuildFile; fileRef = 301A36731E63C2B100DEE787 /* febBulletin.json */; };
+		301A36751E63CAA600DEE787 /* febBulletin.json in Resources */ = {isa = PBXBuildFile; fileRef = 301A36731E63C2B100DEE787 /* febBulletin.json */; };
 		302850E91E44D33D00EC9366 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302850E81E44D33D00EC9366 /* AppDelegate.swift */; };
 		302850EB1E44D33D00EC9366 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302850EA1E44D33D00EC9366 /* ViewController.swift */; };
 		302850EE1E44D33D00EC9366 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 302850EC1E44D33D00EC9366 /* Main.storyboard */; };
@@ -18,6 +21,8 @@
 		3042B2F91E47AB63000654DB /* UserOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3042B2F81E47AB63000654DB /* UserOptions.swift */; };
 		3042B2FC1E47D426000654DB /* UserOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3042B2FB1E47D426000654DB /* UserOptionsViewController.swift */; };
 		3042B2FE1E47EAB1000654DB /* OptionDisplayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3042B2FD1E47EAB1000654DB /* OptionDisplayCell.swift */; };
+		30B5B1621E62151100FB03D2 /* VisaStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B5B1611E62151100FB03D2 /* VisaStatusViewController.swift */; };
+		30B5B1641E62238A00FB03D2 /* OutputText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B5B1631E62238A00FB03D2 /* OutputText.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		301A36711E63C1C100DEE787 /* OutputTextTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutputTextTests.swift; sourceTree = "<group>"; };
+		301A36731E63C2B100DEE787 /* febBulletin.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = febBulletin.json; sourceTree = "<group>"; };
 		302850E51E44D33D00EC9366 /* GreencardTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GreencardTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		302850E81E44D33D00EC9366 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		302850EA1E44D33D00EC9366 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -46,6 +53,8 @@
 		3042B2F81E47AB63000654DB /* UserOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserOptions.swift; path = Model/UserOptions.swift; sourceTree = "<group>"; };
 		3042B2FB1E47D426000654DB /* UserOptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserOptionsViewController.swift; path = View/UserOptionsViewController.swift; sourceTree = "<group>"; };
 		3042B2FD1E47EAB1000654DB /* OptionDisplayCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OptionDisplayCell.swift; path = View/OptionDisplayCell.swift; sourceTree = "<group>"; };
+		30B5B1611E62151100FB03D2 /* VisaStatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VisaStatusViewController.swift; path = View/VisaStatusViewController.swift; sourceTree = "<group>"; };
+		30B5B1631E62238A00FB03D2 /* OutputText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OutputText.swift; path = Model/OutputText.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +114,8 @@
 			children = (
 				302850FD1E44D33D00EC9366 /* GreencardTrackerTests.swift */,
 				302850FF1E44D33D00EC9366 /* Info.plist */,
+				301A36711E63C1C100DEE787 /* OutputTextTests.swift */,
+				301A36731E63C2B100DEE787 /* febBulletin.json */,
 			);
 			path = GreencardTrackerTests;
 			sourceTree = "<group>";
@@ -122,6 +133,7 @@
 			children = (
 				3028510D1E44E0FC00EC9366 /* Bulletin.swift */,
 				3042B2F81E47AB63000654DB /* UserOptions.swift */,
+				30B5B1631E62238A00FB03D2 /* OutputText.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -131,6 +143,7 @@
 			children = (
 				3042B2FB1E47D426000654DB /* UserOptionsViewController.swift */,
 				3042B2FD1E47EAB1000654DB /* OptionDisplayCell.swift */,
+				30B5B1611E62151100FB03D2 /* VisaStatusViewController.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -218,6 +231,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				301A36751E63CAA600DEE787 /* febBulletin.json in Resources */,
 				302850F31E44D33D00EC9366 /* LaunchScreen.storyboard in Resources */,
 				302850F01E44D33D00EC9366 /* Assets.xcassets in Resources */,
 				302850EE1E44D33D00EC9366 /* Main.storyboard in Resources */,
@@ -228,6 +242,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				301A36741E63C2B100DEE787 /* febBulletin.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,9 +257,11 @@
 				3042B2F91E47AB63000654DB /* UserOptions.swift in Sources */,
 				3028510E1E44E0FC00EC9366 /* Bulletin.swift in Sources */,
 				302850EB1E44D33D00EC9366 /* ViewController.swift in Sources */,
+				30B5B1641E62238A00FB03D2 /* OutputText.swift in Sources */,
 				302850E91E44D33D00EC9366 /* AppDelegate.swift in Sources */,
 				3042B2FC1E47D426000654DB /* UserOptionsViewController.swift in Sources */,
 				3028510B1E44D84400EC9366 /* VisaBulletinClient.swift in Sources */,
+				30B5B1621E62151100FB03D2 /* VisaStatusViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				302850FE1E44D33D00EC9366 /* GreencardTrackerTests.swift in Sources */,
+				301A36721E63C1C100DEE787 /* OutputTextTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
